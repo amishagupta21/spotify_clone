@@ -1,0 +1,245 @@
+.conatiner {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+
+.header {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signupcontent {
+  
+    padding: 0px 30%;
+    width: 100%;
+    /* background-color: blue; */
+
+}
+
+.signupcontent h1 {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    font-size: 32px;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.btns {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 15%;
+}
+
+.btns button {
+    width: 100%;
+    background-color: #1877F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    padding: 8px 0px;
+    transform: scale(1);
+}
+
+.btns button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btns button span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: white;
+
+}
+
+.gmail {
+    background-color: white !important;
+    border: 2px solid black;
+}
+
+.gmail span {
+    color: grey !important;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px;
+    width: 90%;
+}
+
+.or div:nth-child(1) {
+    flex: 1;
+    border-top: 1px solid gray;
+}
+
+.or div:nth-child(3) {
+    flex: 1;
+    border-top: 1px solid gray;
+}
+
+.or span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.about {
+    width: 100%;
+    padding: 0px 10%;
+}
+.inputFieldContainer{
+    margin-bottom: 5%;
+
+}
+.inputFieldContainer input {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.inputFieldContainer a {
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
+.inputFieldContainer span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.inputFieldContainer h3 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.datefield {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+.datefield div:nth-child(1){
+    flex:1
+}
+
+.datefield div:nth-child(2){
+    flex:2
+}
+.datefield div:nth-child(3){
+    flex:1
+}
+
+.datefield input,.datefield select {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.datefield span, .datefield label{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500 !important;
+    color: black;
+}
+
+
+.about span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: black;
+}
+.genderfield{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.gender{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.gender span{
+    font-weight: 400;
+}
+
+.checkboxField{
+    display: flex;
+    gap: 10px;
+    padding-top: 9%;  
+}
+.checkboxField p{
+    font-size: 14px;
+}
+.conditions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conditions p{
+   font-size: 12px;
+   padding-top: 2%;
+   text-align: center;
+
+}
+.conditions p span{
+    color: green;
+    text-decoration: underline;
+   font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.signupButton{
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    border: none;
+    background-color: #13D760;
+    transform: scale(1); 
+    margin-top: 5%;
+}
+.signupButton:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.1);
+}

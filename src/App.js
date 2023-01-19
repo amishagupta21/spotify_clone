@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import CreatePlayListPageResult from "./pages/CreatePlayListPageResult";
+import LoginPageResults from "./pages/LoginPageResults";
+import MainPageResults from './pages/MainPageResults';
+import SearchPageResults from "./pages/SearchPageResults";
+import SignupPageResults from "./pages/SignupPageResults";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPageResults/>,
+  }, {
+    path: "/spotifylogin",
+    element: <LoginPageResults/>,
+  },{
+    path: "/signup",
+    element: <SignupPageResults/>,
+  },{
+    path: "/searchpage",
+    element: <SearchPageResults/>,
+  },{
+    path: "/playlists",
+    element: <CreatePlayListPageResult/>,
+  }
+]);
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

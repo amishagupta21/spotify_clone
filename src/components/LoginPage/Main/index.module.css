@@ -1,0 +1,225 @@
+.conatiner {
+    width: 100%;
+    background-color: #ffffff;
+
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.2px solid #cccccc;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30%;
+} 
+
+.loginContainer p {
+    margin:20px 0px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.btns{
+    width: 80%;
+}
+
+.btns button {
+    width: 100%;
+    background-color: #1877F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    padding: 8px 0px;
+}
+
+.btns button span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.apple {
+    background-color: black !important;
+}
+
+.gmail {
+    background-color: white !important;
+    border: 1px solid black;
+}
+
+.gmail span {
+    color: grey !important;
+}
+
+.phone {
+    background-color: white !important;
+    padding: 12px 0px !important;
+    border: 1px solid black;
+}
+
+.phone span {
+    color: grey !important;
+}
+
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.or div:nth-child(1) {
+    flex: 1;
+    border-top: 1px solid gray;
+}
+
+.or div:nth-child(3) {
+    flex: 1;
+    border-top: 1px solid gray;
+}
+
+.or span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.inputField {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.username span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.username p{
+    color: #d31225;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.username input {
+    width: 100%;
+    /* background-color: coral; */
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border: 1px solid red;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.password span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+
+}
+
+.password span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.check span {
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.remember button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    border: none;
+    background-color: #13D760;
+    transform: scale(1);
+    /* Here scale 1 means exisitng width and height */
+}
+
+.remember button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.1);
+    /* Here scale 1.1 means increase exisitng width and height by 10-% */
+}
+
+.remember +  p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.spotify span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+
+}
+
+.spotify {
+    border: 1px solid black;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    padding: 10px 0px;
+    color: grey;
+    padding: 12px 0px
+}
+
+.thickBlackLine{
+    border:2px solid black !important;
+}
+
+.errorLine{
+    border:2px solid red !important;
+}
+
+.thickBlackLinePassowrd{
+    border:2px solid black !important;
+}
+
+.errorLinePassword{
+    border:2px solid red !important;
+}
+
