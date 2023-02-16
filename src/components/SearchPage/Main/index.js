@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import SideBar from '../../Fixed/SideBar'
 import leftarrow from "../../../assests/icons/leftarrow.svg"
 import rightarrow from "../../../assests/icons/rightarrow.svg"
 import searchicon from "../../../assests/icons/searchicon.svg"
 import styles from "./index.module.css"
-import punjabiSong from "../../../assests/images/punjabisong.jpg"
 import axios from 'axios'
 
 
@@ -32,7 +31,6 @@ const SearchPage = () => {
     axios.request(options).then(function (response) {
       console.log(response.data.data);
       setVideos(response.data.data)
-      // console.log(setVideos)
     }).catch(function (error) {
       console.error(error);
     });

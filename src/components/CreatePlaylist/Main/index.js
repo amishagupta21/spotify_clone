@@ -41,9 +41,9 @@ const CreatePlayList = () => {
                     </div>
 
                     <div className={styles.accountField}>
-                        <img src={accounticon} height={22} width={22} />
+                        <img src={accounticon} height={22} width={22} alt="accounticon"/>
                         <span>amishagupta</span>
-                        <img src={downarrow} height={16} width={16} />
+                        <img src={downarrow} height={16} width={16} alt="downarrow"/>
                     </div>
                 </div>
 
@@ -65,13 +65,13 @@ const CreatePlayList = () => {
                         </div>
 
                         <div className={styles.favourites}>
-                           <img src={fav1} height="70%" width="70%"/>
+                           <img src={fav1} height="70%" width="70%" alt="sad-song"/>
                            <span>sad songs</span>
                            <span>By AmishaGupta</span>
                         </div>
 
                         <div className={styles.favourites}>
-                           <img src={fav1} height="70%" width="70%"/>
+                           <img src={fav1} height="70%" width="70%" alt="favourite icon"/>
                            <span>sad songs</span>
                            <span>By AmishaGupta</span>
                         </div>
