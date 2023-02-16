@@ -3,6 +3,8 @@
     width: 100%;
     background-color: black;
     display: flex;
+    /* position: relative; */
+
  }
  .homeBar {
     width: 70%;
@@ -80,7 +82,7 @@
     height: 90vh;
     width: 100%;
     background-color: #121212;
-    overflow-y: scroll;
+     overflow-x: hidden;
  }
 
  .focusSection {
@@ -123,10 +125,12 @@
  .row {
     display: flex;
     gap: 15px;
+    /* background-color: green; */
+    overflow-x: scroll;
  }
 
  .focussongs {
-    height: 300px;
+    height: 250px;
     width: 30%;
     background-color: black;
     padding-left: 20px;
@@ -134,15 +138,13 @@
     margin-top: 20px;
     color: white;
     border-radius: 10px;
-
  }
 
  .image {
-    width: 90%;
+    width: 70%;
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    background-color: pink;
     margin-bottom: 10px;
  }
 
@@ -150,7 +152,7 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-
+   
  }
 
  .focussongs p {
@@ -161,7 +163,7 @@
  }
 
  .playListSeaction {
-   
+    
     padding-left: 20px;
     padding-top: 30px;
     padding-right: 10px;
@@ -174,7 +176,6 @@
  }
 
  .spotifysongs {
-    
     background-color: black;
     padding-left: 20px;
     padding-top: 10px;

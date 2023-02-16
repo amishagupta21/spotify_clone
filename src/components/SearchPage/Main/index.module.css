@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    background-color:#121212;
+    background-color: #121212;
     border-radius: 100px;
     padding: 9px 10px
 }
@@ -46,56 +46,63 @@
     outline: none;
     width: 100%;
     background-color: transparent;
+    color: #ffffff;
 }
 
 .focusSection {
-    height: 60vh;
+    height: 90vh;
     width: 100%;
     padding-left: 20px;
     padding-top: 30px;
     padding-right: 10px;
-    background-color:#121212;
- }
+    background-color: #121212;
+    overflow: scroll;
+}
 
- 
- .list span{
-   font-size: 24px;
-   line-height: 20px;
-   font-weight: 700;
-   color: white;
- }
+
+.list span {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 700;
+    color: white;
+}
 
 .list span:hover {
     text-decoration: underline;
     cursor: pointer;
- }
+}
 
- .row{
+.row {
     height: 30vh;
     display: flex;
     gap: 20px;
-    margin-top: 20px
+    margin-top: 20px;
+    flex-wrap: wrap;
 
- }
- .chooseSong{
+}
+
+.chooseSong {
     width: 25%;
     height: 120%;
-    background-color: orange;
-    border-radius:15px;
+    background-color: grey;
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
- }
- .chooseSong span{
+    flex-basis: 250px;
+}
+
+.chooseSong span {
     position: absolute;
     top: 20px;
     left: 15px;
     font-size: 24px;
-   line-height: 20px;
-   font-weight: 700;
-   color: white;
+    line-height: 20px;
+    font-weight: 700;
+    color: white;
 
- }
-.chooseSong img{
+}
+
+.chooseSong img {
     position: absolute;
     right: 0px;
     bottom: 0px;

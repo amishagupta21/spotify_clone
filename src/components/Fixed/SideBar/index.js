@@ -9,7 +9,6 @@ import likedsong from "../../../assests/icons/likedsong.svg"
 import { Link } from 'react-router-dom'
 
 const SideBar = () => {
-    
     return (
         <div className={styles.SideBar}>
             <div className={styles.logo}>

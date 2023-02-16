@@ -10,7 +10,7 @@ import axios from 'axios'
 
 
 const SearchPage = () => {
-  const [videos, setVideos] = useState([1, 2, 3, 4])
+  const [videos, setVideos] = useState([])
 
   const [singer, setSinger] = useState("")
   const singerHandler = (e) => {
@@ -18,35 +18,27 @@ const SearchPage = () => {
   }
     
   const handleClick = () => {
-    alert("working")
-    const clientId = "6c8ed59239dd4a5d99e2d73654c65f06"
-    const redirectUrl = "http://localhost:3000/"
-    const apiUrl = "https://accounts.spotify.com/authorize"
-    const scope = ["user-read-email",
-      'user-read-private', "user-read-playback-state",
-      " user-modify-playback-state",
-      "user-read-currently-playing", 
-      "user-read-playback-position",
-      "user-top-read",
-      "user-read-recently-played"
-    ];
-    window.location.href = `${apiUrl}?client_id=${clientId}$redirect_url=${redirectUrl}$scope=${scope.join(" ")}&response_type=token&show_dialog=true`
-
-
-
+    // alert("working")
+    const options = {
+      method: 'GET',
+      url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
+      params: {q: singer},
+      headers: {
+        'X-RapidAPI-Key': '85f21379f3mshf7d7a5cd7f475f2p18f180jsn43b4792c0f30',
+        'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+      }
+    };
+    
+    axios.request(options).then(function (response) {
+      console.log(response.data.data);
+      setVideos(response.data.data)
+      // console.log(setVideos)
+    }).catch(function (error) {
+      console.error(error);
+    });
   }
+ 
 
-  // const songStar=()=>{
-  //   console.log("working")
-  //   axios({
-  //    method:"GET",
-  //    url:`https://api.spotify.com/v1/tracks/2TpxZ7JUBn3uw46aR7qd6V`
-  //   }).then((res)=>{
-  //     console.log("response",res)
-  // }).catch((err)=>{
-  //     console.log("error",err)
-  // })
-  // }
   return (
     <div className={styles.container}>
       <SideBar />
@@ -66,11 +58,11 @@ const SearchPage = () => {
             <span>Browse all</span>
           </div>
           <div className={styles.row}>
-            {videos.map((video) => {
+            {videos.map((video,index) => {
               return (
-                <div className={styles.chooseSong}>
-                  <span>Punjabi</span>
-                  <img src={punjabiSong} height="50%" width="50%" alt="punjabi song" />
+                <div key={index} className={styles.chooseSong}>
+                  <span>{video.artist.name}</span>
+                  <img src={video.artist.picture} height="50%" width="50%" alt="punjabi song"/>
                 </div>
               )
             })}

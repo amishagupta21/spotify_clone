@@ -1,50 +1,68 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./index.module.css"
 
 import leftarrow from "../../../assests/icons/leftarrow.svg"
 import rightarrow from "../../../assests/icons/rightarrow.svg"
-import song from "../../../assests/images/song.jpg"
-import spotify from "../../../assests/images/spotify.jpg"
-// import { useNavigate } from 'react-router-dom'
 import SideBar from '../../Fixed/SideBar'
-import { Navigate, useNavigate } from 'react-router-dom'
-// import axios from 'axios'
+import {useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 
 
 function HomePage() {
-    const [videos, setVideos] = useState([1, 2, 3, 4]);
-    const [spotifysong, setSpotifySong] = useState([1, 2, 3, 4]);
-     
-    const navigate=useNavigate()
-    const signuppage=()=>{
+    const [videos, setVideos] = useState([]);
+    const [spotifysong, setSpotifySong] = useState([]);
+
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
+            params: { q: 'arijit singh' },
+            headers: {
+                'X-RapidAPI-Key': '85f21379f3mshf7d7a5cd7f475f2p18f180jsn43b4792c0f30',
+                'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+            }
+        };
+        axios.request(options).then(function (response) {
+            console.log(response.data);
+            setVideos(response.data.data);
+
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }, [])
+
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
+            params: { q: 'neha kakkar' },
+            headers: {
+                'X-RapidAPI-Key': '85f21379f3mshf7d7a5cd7f475f2p18f180jsn43b4792c0f30',
+                'X-RapidAPI-Host': 'deezerdevs-deezer.p.rapidapi.com'
+            }
+        };
+        axios.request(options).then(function (response) {
+            console.log(response.data);
+            setSpotifySong(response.data.data)
+        }).catch(function (error) {
+            console.error(error);
+        });
+    }, [])
+
+    const navigate = useNavigate()
+    const signuppage = () => {
         navigate("/signup")
     }
-    const loginpage=()=>{
+    const loginpage = () => {
         navigate("/spotifylogin")
     }
 
-    // const clientId="6c8ed59239dd4a5d99e2d73654c65f06"
-    // const clientSecreat="63559caef09f420889815e45e9021e7b"
-
-    // const spotifyApi=()=>{
-    // alert("working")
-    //  axios({
-    //     method:"GET",
-    //     url:"https://api.spotify.com/v1/albums/id/tracks"
-    //  })
-    //  .then((res)=>{
-    //     console.log("response",res)
-    //  })
-    //  .catch((err)=>{
-    //     console.log("error",err)
-    //  })
-    // }
 
     return (
         <div className={styles.container}>
             <SideBar />
-            
+
             <div className={styles.homeBar}>
                 <div className={styles.search}>
                     <div className={styles.navigation_icon}>
@@ -74,9 +92,9 @@ function HomePage() {
                             {videos.map((video, index) => {
                                 return (
                                     <div key={index} className={styles.focussongs}>
-                                        <img className={styles.image} src={song} alt="focussong" />
-                                        <span>Peaceful Piano</span>
-                                        <p>Relax and indulge with beautiful piano pieces</p>
+                                        <img className={styles.image} src={video?.artist?.picture} alt="focussong" />
+                                        <span>{video?.artist?.link}</span>
+                                        <p>{video?.title}</p>
                                     </div>
                                 )
                             })}
@@ -93,15 +111,22 @@ function HomePage() {
                             {spotifysong.map((song, index) => {
                                 return (
                                     <div key={index} className={styles.focussongs}>
-                                        <img className={styles.image} src={spotify} alt={song} />
-                                        <span>Peaceful Piano</span>
-                                        <p>Relax and indulge with beautiful piano pieces</p>
+                                        <img className={styles.image} src={song?.artist?.picture} alt="songs" />
+                                        <span>{song?.artist?.link}</span>
+                                        <p>{song?.title}</p>
                                     </div>
                                 )
                             })}
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className={styles.plyaContainer}>
+                {/* <audio controls>
+                    <source src="https://cdns-preview-6.dzcdn.net/stream/c-655dfb802c35579d26a32136e3d0e7b3-12.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                </audio> */}
             </div>
         </div>
     )
