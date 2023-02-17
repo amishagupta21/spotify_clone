@@ -16,11 +16,12 @@ const CreatePlayList = () => {
     useEffect(() => {
         const enter = () => setStopbtn(true);
         const leave = () => setStopbtn(false);
-        hoverPlayBtnRef?.current?.addEventListener("mouseenter", enter)
-        hoverPlayBtnRef?.current?.addEventListener("mouseout", leave)
+        const ref = hoverPlayBtnRef.current;
+        ref.addEventListener("mouseenter", enter)
+        ref.addEventListener("mouseout", leave)
         return () => {
-            hoverPlayBtnRef?.current?.removeEventListener('mouseenter', enter);
-            hoverPlayBtnRef?.current?.removeEventListener("mouseout", leave);
+            ref.removeEventListener('mouseenter', enter);
+            ref.removeEventListener("mouseout", leave);
         }
     }, []);
     
